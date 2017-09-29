@@ -12,6 +12,7 @@ class Home extends CI_Controller{
 		$data = array(
 		'title'=> 'Biner - Code Jam',
 		'isi' => 'pages/home',
+		'nav' => 'nav.php',
 		'nav_active' => 'beranda'
 		);
 		

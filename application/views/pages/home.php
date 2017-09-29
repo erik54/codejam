@@ -1,25 +1,43 @@
+    <!-- Intro Section -->
+        <div class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url('//placehold.it/1500'); min-height: 80%">
+            <div class="full-bg-img">
+                <div class="container flex-center">
+                    <div class="row pt-5 mt-3">
+                        <div class="col-md-12">
+                            <div class="text-center">
+                                <h1 class="h1-reponsive white-text font-up font-bold mb-3 wow fadeInDown" data-wow-delay="0.3s"><strong>Welcome to Karamel Education</strong></h1>
+                                <hr class="hr-light mt-4 wow fadeInDown" data-wow-delay="0.4s">
+                                <h5 class="font-up mb-5 white-text wow fadeInDown" data-wow-delay="0.4s"><strong>Maniskan masa depan dengan pendidikan!</strong></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Intro Section -->
+
 <div class="container">
-	<h1>This is Home</h1>
-	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-	  	<ol class="carousel-indicators">
-	    	<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-	    	<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-	  	</ol>
-	  	<div class="carousel-inner">
-	    	<div class="carousel-item active">
-	      		<img class="d-block w-100" src="<?php echo base_url()."assets/image/home1.jpg";?>" alt="First slide">
-	    	</div>
-	    	<div class="carousel-item">
-	      		<img class="d-block w-100" src="<?php echo base_url()."assets/image/home2.jpg";?>" alt="Second slide">
-	    	</div>
-	  	</div>
-	  	<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-	    	<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-	    	<span class="sr-only">Previous</span>
-	  	</a>
-	  	<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-	    	<span class="carousel-control-next-icon" aria-hidden="true"></span>
-	    	<span class="sr-only">Next</span>
-		</a>
-	</div>
+	<h2 class="text-black">Home Bro</h2>
+	<div class="card">
+  <h4 class="card-header">Featured</h4>
+  <div class="card-body">
+    <h4 class="card-title">Special title treatment</h4>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div><div class="card">
+  <h4 class="card-header">Featured</h4>
+  <div class="card-body">
+    <h4 class="card-title">Special title treatment</h4>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div><div class="card">
+  <h4 class="card-header">Featured</h4>
+  <div class="card-body">
+    <h4 class="card-title">Special title treatment</h4>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
 </div>

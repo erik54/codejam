@@ -1,17 +1,29 @@
 <!--Footer-->
-<footer id="footer" class="page-footer white center-on-small-only" style="bottom: 0 !important; position: relative; height: 10%">
+<footer class="page-footer bg-danger center-on-small-only">
 
-    <hr>
-    
+    <!--Footer Links-->
+    <div class="container-fluid">
+        <div class="row">
+
+            <!--First column-->
+            <div class="col-md-6">
+                <h5 class="title">Biner 3.0</h5>
+                <p>GALAXY : Grow and Accelerate for Xtraordinary of Technology</p>
+            </div>
+            <!--/.First column-->
+        </div>
+    </div>
+    <!--/.Footer Links-->
+
     <!--Copyright-->
-    <div class="footer-copyright wow fadeIn primary-color-dark" data-wow-delay="0.2s">
-        <div class="container-fluid"><center>
-            &copy;
-            <?php echo date('Y');?> Copyright: <a href="<?php echo base_url('beranda') ?>"> Default UNJ </a>
-        </center>
+    <div class="footer-copyright">
+        <div class="container-fluid">
+            © <?php echo date('Y');?> Copyright: <a href="https://defaultunj.com" target="_blank"> Default UNJ </a>
+
         </div>
     </div>
     <!--/.Copyright-->
+
 </footer>
 <!--/.Footer-->
 
