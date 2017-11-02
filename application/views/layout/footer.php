@@ -7,8 +7,8 @@
 
             <!--First column-->
             <div class="col-md-6">
-                <h5 class="title">Biner 3.0</h5>
-                <p>GALAXY : Grow and Accelerate for Xtraordinary of Technology</p>
+                <h5 class="title"><a href="http://biner.defaultunj.com">Biner 3.0</a></h5>
+                <p>GALAXY : Grow and Accelerate for Xtraordinary at Technology</p>
             </div>
             <!--/.First column-->
         </div>
@@ -30,7 +30,7 @@
 	<script type="text/javascript" src="<?php echo base_url('assets/js/jquery-3.2.1.min.js')?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('assets/js/popper.min.js')?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.min.js')?>"></script>
-	<script type="text/javascript" src="<?php echo base_url('assets/js/mdb.min.js')?>"></script>
+	<script type="text/javascript" src="<?php echo base_url('assets/js/mdb.js')?>"></script>
 
 	<script>
         // SideNav Initialization

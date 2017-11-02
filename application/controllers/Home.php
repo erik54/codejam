@@ -1,5 +1,5 @@
 <?php
-//Built with love from /native
+/* <> with love by Default */
 defined('BASEPATH') OR exit('Hayoo mau buka apaaaa??');
 class Home extends CI_Controller{
 	
@@ -10,10 +10,10 @@ class Home extends CI_Controller{
 	
 	public function index(){
 		$data = array(
-		'title'=> 'Biner - Code Jam',
+		'title'=> 'Biner 3.0 - Code Jam',
 		'isi' => 'pages/home',
 		'nav' => 'nav.php',
-		'nav_active' => 'beranda'
+		'nav_active' => 'Home'
 		);
 		
 		if(isset($_SESSION['level']) && $_SESSION['level'] == 5){
@@ -25,37 +25,24 @@ class Home extends CI_Controller{
 		$this->load->view('layout/wrapper',$data);
 	}
 
-	public function tentang_karamel(){
+	public function login(){
 		$data = array(
-		'title'=> 'My Karamel - Tentang Karamel',
+		'title'=> 'CodeJam - Login',
 		'nav' => 'nav.php',
-		'isi' => 'pages/tentang_karamel',
-		'nav_active' => 'tentang_karamel'
+		'isi' => 'pages/login',
+		'nav_active' => 'Masuk'
 		);
-		
-		if(isset($_SESSION['level']) && $_SESSION['level'] == 5){
-			$data['nav'] = 'calon_ortu/nav.php';
-		}
 		
 		$this->load->view('layout/wrapper',$data);
 	}
 
-	public function login(){
-		$this->db->order_by('IDpengumuman', 'DESC');
-		
+	public function masuk(){
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');
-
 		
-
 		$data = array(
 			'username' => $username, 
-			'password' => $password,
-			'title'=> 'My Karamel - Beranda',
-			'nav' => 'nav.php',
-			'isi' => 'pages/beranda',
-			'nav_active' => 'beranda',
-			'news' => $this->home_model->get_news()
+			'password' => $password
 		);
 
 		$login = $this->home_model->get_users($data);
@@ -81,7 +68,7 @@ class Home extends CI_Controller{
 					}elseif($level == 2){
 						$data['nav'] = 'nav.php';
 					}
-
+					
 					$this->load->view('layout/wrapper', $data);
 				}else{
 					$data['err_massages'] = "Password yang dimasukkan salah....";
@@ -95,7 +82,7 @@ class Home extends CI_Controller{
 
 	public function registrasi(){
 		$data = array(
-		'title'		=> 'My Karamel - Registrasi',
+		'title'		=> 'CodeJam - Registrasi',
 		'nav' 		=> 'nav.php',
 		'isi' 		=> 'pages/registrasi',
 		'nav_active'=> 'registrasi',

@@ -1,0 +1,27 @@
+ ===============
+|| ERD CodeJam ||
+ ===============
+		 __________				 ___________ 		 _____________________________
+		|  admin   |			|   users   |		| participants				  |
+		|==========|			|===========|		|=============================|
+		| IDadmin  |	 |------| username  |---|	| IDparticipants			  |-----|
+		| username |-----|		| email		|	|---| username					  |		|
+		|__________|			| password	|		| nama						  |		|
+								| level		|		| college					  |		|
+								|___________|		| tingkat ("SMA","Mahasiswa") |		|
+													|_____________________________|		|
+ _________________________________			 ________________ 							|
+|				soal			  |			| jawaban 		 |							|
+|=================================|			|================|							|
+| IDsoal 						  |-----|	| IDjawaban		 |							|
+| tinkat enum ("SMA", "Mahasiwa") | 	|--<| IDsoal		 |							|
+| soal							  |			| IDparticipants |>-------------------------|
+| tanggal						  |			| waktu			 |
+| waktu							  |			| fileJawaban	 |
+|_________________________________|			| fileAlgoritma	 |
+											|________________|
+ket:
+---< = one-to-many
+---- = one-to-one
+
+Built with love by Erik SA
