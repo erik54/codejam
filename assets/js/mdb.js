@@ -1,6 +1,6 @@
 /*!
  * Material Design for Bootstrap 4
- * Version: MDB PRO 4.4.0 beta
+ * Version: MDB PRO 4.4.1
  *
  *
  * Copyright: Material Design for Bootstrap
@@ -6627,7 +6627,7 @@ module.exports = function() {
 				onHover: null,
 				mode: 'nearest',
 				intersect: true,
-				animationDuration: 400
+				animationDuration: 4000
 			},
 			onClick: null,
 			defaultColor: 'rgba(0,0,0,0.1)',

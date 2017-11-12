@@ -1,9 +1,20 @@
-    <!-- Intro Section -->
-        <div class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url('//placehold.it/1500'); min-height: 80%">
-            <div class="full-bg-img">
+<!-- Intro Section -->
+<div class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url('<?php echo base_url("assets/image/home2.jpg") ?>'); min-height: 80%">
+    <div class="full-bg-img">
+    	<div class="container flex-center">
+            <div class="row pt-5 mt-3">
+                <div class="col-md-12">
+                    <div class="text-center">
+                        <h1 class="h1-reponsive white-text font-up font-bold mb-3 wow fadeInDown" data-wow-delay="0.3s"><strong>CodeJam BINER 3.0</strong></h1>
+                        <hr class="hr-light mt-4 wow fadeInDown" data-wow-delay="0.4s">
+                        <h5 class="font-up mb-5 white-text wow fadeInDown" data-wow-delay="0.4s"><strong>#MayTheCodeBuiltInYou</strong></h5>
+                    </div>
+                </div>
             </div>
         </div>
-    <!-- Intro Section -->
+    </div>
+</div>
+<!-- Intro Section -->
 
 <div class="container" style="height: 800px">
 	<div class="row">
@@ -18,6 +29,5 @@
 				</div>
 			</div>
 		</div>
-</div>
-
+	</div>
 </div>

@@ -1,0 +1,418 @@
+.picker__header select {
+    display: inline-block !important;
+}
+nav.fill ul li a {
+    position: relative;
+}
+
+nav.fill ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #aaa;
+    height: 1px;
+}
+nav.fill ul li a {
+    transition: all 2s;
+}
+
+nav.fill ul li a:after {
+    text-align: left;
+    content: '.';
+    margin: 0;
+    opacity: 0;
+}
+nav.fill ul li a:hover {
+    color: #fff;
+    z-index: 1;
+}
+nav.fill ul li a:hover:after {
+    z-index: -10;
+    animation: fill 1s forwards;
+    -webkit-animation: fill 1s forwards;
+    -moz-animation: fill 1s forwards;
+    opacity: 1;
+}
+
+@-webkit-keyframes fill {
+    0% {
+        width: 0%;
+        height: 1px;
+    }
+    50% {
+        width: 100%;
+        height: 1px;
+    }
+    100% {
+        width: 100%;
+        height: 100%;
+        background: #333;
+    }
+}
+
+        .cascading-admin-card {
+  margin-top: 20px; }
+  .cascading-admin-card .admin-up {
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: -20px; }
+    .cascading-admin-card .admin-up .fa {
+      padding: 1.7rem;
+      font-size: 2rem;
+      color: #fff;
+      text-align: left;
+      margin-right: 1rem;
+      border-radius: 3px; }
+    .cascading-admin-card .admin-up .data {
+      float: right;
+      margin-top: 2rem;
+      text-align: right; }
+      .cascading-admin-card .admin-up .data p {
+        color: #999999;
+        font-size: 12px; }
+
+.classic-admin-card .card-body {
+  color: #fff;
+  margin-bottom: 0;
+  padding: 0.9rem; }
+  .classic-admin-card .card-body p {
+    font-size: 13px;
+    opacity: 0.7;
+    margin-bottom: 0; }
+  .classic-admin-card .card-body h4 {
+    margin-top: 10px; }
+  .classic-admin-card .card-body .float-right .fa {
+    font-size: 3rem;
+    opacity: 0.5; }
+
+.classic-admin-card .progress {
+  margin: 0;
+  opacity: 0.7; }
+
+.mdl-data-table {
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-collapse: collapse;
+    white-space: nowrap;
+    font-size: 13px;
+    background-color: rgb(255,255,255); }
+.mdl-data-table thead {
+    padding-bottom: 3px; }
+.mdl-data-table thead .mdl-data-table__select {
+    margin-top: 0; }
+.mdl-data-table tbody tr {
+    position: relative;
+    height: 48px;
+    transition-duration: 0.28s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: background-color; }
+.mdl-data-table tbody tr.is-selected {
+    background-color: #e0e0e0; }
+.mdl-data-table tbody tr:hover {
+    background-color: #eeeeee; }
+.mdl-data-table td, .mdl-data-table th {
+    padding: 0 18px 12px 18px;
+    text-align: right; }
+.mdl-data-table td:first-of-type, .mdl-data-table th:first-of-type {
+    padding-left: 24px; }
+.mdl-data-table td:last-of-type, .mdl-data-table th:last-of-type {
+    padding-right: 24px; }
+.mdl-data-table td {
+    position: relative;
+    vertical-align: middle;
+    height: 48px;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    padding-top: 12px;
+    box-sizing: border-box; }
+.mdl-data-table td .mdl-data-table__select {
+    vertical-align: middle; }
+.mdl-data-table th {
+    position: relative;
+    vertical-align: bottom;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 24px;
+    letter-spacing: 0;
+    height: 48px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.54);
+    padding-bottom: 8px;
+    box-sizing: border-box; }
+.mdl-data-table th.mdl-data-table__header--sorted-ascending, .mdl-data-table th.mdl-data-table__header--sorted-descending {
+    color: rgba(0, 0, 0, 0.87); }
+.mdl-data-table th.mdl-data-table__header--sorted-ascending:before, .mdl-data-table th.mdl-data-table__header--sorted-descending:before {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    word-wrap: normal;
+    -moz-font-feature-settings: 'liga';
+    font-feature-settings: 'liga';
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    font-size: 16px;
+    content: "\e5d8";
+    margin-right: 5px;
+    vertical-align: sub; }
+.mdl-data-table th.mdl-data-table__header--sorted-ascending:hover, .mdl-data-table th.mdl-data-table__header--sorted-descending:hover {
+    cursor: pointer; }
+.mdl-data-table th.mdl-data-table__header--sorted-ascending:hover:before, .mdl-data-table th.mdl-data-table__header--sorted-descending:hover:before {
+    color: rgba(0, 0, 0, 0.26); }
+.mdl-data-table th.mdl-data-table__header--sorted-descending:before {
+    content: "\e5db"; }
+.mdl-data-table__select {
+    width: 16px; }
+.mdl-data-table__cell--non-numeric.mdl-data-table__cell--non-numeric {
+    text-align: left; }
+
+/* Admin*/
+input#search_admin::-webkit-input-placeholder {
+    color: white !important;
+}
+
+input#search_admin:-moz-placeholder { /* Firefox 18- */
+    color: white !important;
+}
+
+input#search_admin::-moz-placeholder {  /* Firefox 19+ */
+    color: white !important;
+}
+
+input#search_admin:-ms-input-placeholder {
+    color: white !important;
+}
+
+/* siswa*/
+input#search_murid::-webkit-input-placeholder {
+    color: white !important;
+}
+
+input#search_murid:-moz-placeholder { /* Firefox 18- */
+    color: white !important;
+}
+
+input#search_murid::-moz-placeholder {  /* Firefox 19+ */
+    color: white !important;
+}
+
+input#search_murid:-ms-input-placeholder {
+    color: white !important;
+}
+
+/* pengajar*/
+input#search_guru::-webkit-input-placeholder {
+    color: white !important;
+}
+
+input#search_guru:-moz-placeholder { /* Firefox 18- */
+    color: white !important;
+}
+
+input#search_guru::-moz-placeholder {  /* Firefox 19+ */
+    color: white !important;
+}
+
+input#search_guru:-ms-input-placeholder {
+    color: white !important;
+}
+
+/* calonortu*/
+input#search_calonOrtu::-webkit-input-placeholder {
+    color: white !important;
+}
+
+input#search_calonOrtu:-moz-placeholder { /* Firefox 18- */
+    color: white !important;
+}
+
+input#search_calonOrtu::-moz-placeholder {  /* Firefox 19+ */
+    color: white !important;
+}
+
+input#search_calonOrtu:-ms-input-placeholder {
+    color: white !important;
+}
+
+
+/* ortu*/
+input#search_ortus::-webkit-input-placeholder {
+    color: white !important;
+}
+
+input#search_ortus:-moz-placeholder { /* Firefox 18- */
+    color: white !important;
+}
+
+input#search_ortus::-moz-placeholder {  /* Firefox 19+ */
+    color: white !important;
+}
+
+input#search_ortus:-ms-input-placeholder {
+    color: white !important;
+}
+
+/* Fee*/
+input#search_fee::-webkit-input-placeholder {
+    color: white !important;
+}
+
+input#search_fee:-moz-placeholder { /* Firefox 18- */
+    color: white !important;
+}
+
+input#search_fee::-moz-placeholder {  /* Firefox 19+ */
+    color: white !important;
+}
+
+input#search_fee:-ms-input-placeholder {
+    color: white !important;
+}
+
+/* Bayaran*/
+input#search_bayaran::-webkit-input-placeholder {
+    color: white !important;
+}
+
+input#search_bayaran:-moz-placeholder { /* Firefox 18- */
+    color: white !important;
+}
+
+input#search_bayaran::-moz-placeholder {  /* Firefox 19+ */
+    color: white !important;
+}
+
+input#search_bayaran:-ms-input-placeholder {
+    color: white !important;
+}
+
+/* Mmapel*/
+input#Msearch_mapel::-webkit-input-placeholder {
+    color: white !important;
+}
+
+input#Msearch_mapel:-moz-placeholder { /* Firefox 18- */
+    color: white !important;
+}
+
+input#Msearch_mapel::-moz-placeholder {  /* Firefox 19+ */
+    color: white !important;
+}
+
+input#Msearch_mapel:-ms-input-placeholder {
+    color: white !important;
+}
+/* Mkelas*/
+input#Msearch_kelas::-webkit-input-placeholder {
+    color: white !important;
+}
+
+input#Msearch_kelas:-moz-placeholder { /* Firefox 18- */
+    color: white !important;
+}
+
+input#Msearch_kelas::-moz-placeholder {  /* Firefox 19+ */
+    color: white !important;
+}
+
+input#Msearch_kelas:-ms-input-placeholder {
+    color: white !important;
+}
+/* Mprogram*/
+input#Msearch_program::-webkit-input-placeholder {
+    color: white !important;
+}
+
+input#Msearch_program:-moz-placeholder { /* Firefox 18- */
+    color: white !important;
+}
+
+input#Msearch_program::-moz-placeholder {  /* Firefox 19+ */
+    color: white !important;
+}
+
+input#Msearch_program:-ms-input-placeholder {
+    color: white !important;
+}
+/* Mruangan*/
+input#Msearch_ruangan::-webkit-input-placeholder {
+    color: white !important;
+}
+
+input#Msearch_ruangan:-moz-placeholder { /* Firefox 18- */
+    color: white !important;
+}
+
+input#Msearch_ruangan::-moz-placeholder {  /* Firefox 19+ */
+    color: white !important;
+}
+
+input#Msearch_ruangan:-ms-input-placeholder {
+    color: white !important;
+}
+
+/* Jadwal TABLE search*/
+input#searchJadwalTable::-webkit-input-placeholder {
+    color: white !important;
+}
+
+input#searchJadwalTable:-moz-placeholder { /* Firefox 18- */
+    color: white !important;
+}
+
+input#searchJadwalTable::-moz-placeholder {  /* Firefox 19+ */
+    color: white !important;
+}
+
+input#searchJadwalTable:-ms-input-placeholder {
+    color: white !important;
+}
+
+
+/* class for white placeholder*/
+input.white_placeholder::-webkit-input-placeholder {
+    color: white !important;
+}
+
+input.white_placeholder:-moz-placeholder { /* Firefox 18- */
+    color: white !important;
+}
+
+input.white_placeholder::-moz-placeholder {  /* Firefox 19+ */
+    color: white !important;
+}
+
+input.white_placeholder:-ms-input-placeholder {
+    color: white !important;
+}
+
+/* class for center white placeholder*/
+input.white_placeholder.center::-webkit-input-placeholder {
+    color: white !important;
+    text-align: center;
+}
+
+input.white_placeholder.center:-moz-placeholder { /* Firefox 18- */
+    color: white !important;
+    text-align: center;
+}
+
+input.white_placeholder.center::-moz-placeholder {  /* Firefox 19+ */
+    color: white !important;
+    text-align: center;
+}
+
+input.white_placeholder.center:-ms-input-placeholder {
+    color: white !important;
+    text-align: center;
+}

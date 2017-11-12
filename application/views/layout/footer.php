@@ -1,5 +1,5 @@
 <!--Footer-->
-<footer class="page-footer bg-danger center-on-small-only">
+<footer class="page-footer bg-danger center-on-small-only my-0">
 
     <!--Footer Links-->
     <div class="container-fluid">

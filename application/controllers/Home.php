@@ -16,12 +16,6 @@ class Home extends CI_Controller{
 		'nav_active' => 'Home'
 		);
 		
-		if(isset($_SESSION['level']) && $_SESSION['level'] == 5){
-			$data['nav'] = 'calon_ortu/nav.php';
-		}else{
-			$data['nav'] = 'nav.php';
-		}
-		
 		$this->load->view('layout/wrapper',$data);
 	}
 
