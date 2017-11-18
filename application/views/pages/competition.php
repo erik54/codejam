@@ -1,4 +1,4 @@
-<div style="min-height: 10%">
+<div class="my-5 py-1">
 </div>
 <div class="container">
 	<div class="row" style="max-height: 70%">
@@ -48,13 +48,25 @@
 			    	<?php $i = 1 ?>
 					<?php foreach ($soal as $p): ?>
 						<?php if ($i == 1): ?>
-							<li class="nav-item">
-					            <a class="nav-link waves-light active" data-toggle="tab" href="#soal<?php echo $i ?>" role="tab"><i class="fa fa-user fa-2x" aria-hidden="true"></i><br>Soal <?php echo $i ?></a>
-					        </li>
+							<?php if ($this->compete_model->check_jawaban_si($this->compete_model->get_participants($_SESSION['username'])['IDparticipants'],$p->IDsoal)!=0): ?>
+								<li class="nav-item">
+						            <a class="nav-link waves-light active" data-toggle="tab" href="#soal<?php echo $i ?>" role="tab"><i class="fa fa-thumbs-o-up fa-2x" aria-hidden="true"></i><br>Soal <?php echo $i ?></a>
+						        </li>
+							<?php else: ?>
+								<li class="nav-item">
+						            <a class="nav-link waves-light active" data-toggle="tab" href="#soal<?php echo $i ?>" role="tab"><i class="fa fa-user fa-2x" aria-hidden="true"></i><br>Soal <?php echo $i ?></a>
+						        </li>
+					    	<?php endif; ?>
 						<?php else: ?>
-							<li class="nav-item">
-					            <a class="nav-link waves-light" data-toggle="tab" href="#soal<?php echo $i ?>" role="tab"><i class="fa fa-user fa-2x" aria-hidden="true"></i><br>Soal <?php echo $i ?></a>
-					        </li>
+							<?php if ($this->compete_model->check_jawaban_si($this->compete_model->get_participants($_SESSION['username'])['IDparticipants'],$p->IDsoal)!=0): ?>
+								<li class="nav-item">
+						            <a class="nav-link waves-light" data-toggle="tab" href="#soal<?php echo $i ?>" role="tab"><i class="fa fa-thumbs-o-up fa-2x" aria-hidden="true"></i><br>Soal <?php echo $i ?></a>
+						        </li>
+							<?php else: ?>
+								<li class="nav-item">
+						            <a class="nav-link waves-light" data-toggle="tab" href="#soal<?php echo $i ?>" role="tab"><i class="fa fa-user fa-2x" aria-hidden="true"></i><br>Soal <?php echo $i ?></a>
+						        </li>
+					        <?php endif; ?>
 						<?php endif ?>
 					<?php $i++; endforeach ?>
 			    </ul>
@@ -68,65 +80,74 @@
 						<div class="tab-pane fade in show active" id="soal<?php echo $i ?>" role="tabpanel">
 							<!-- Soal -->
 							<div class="my-3">
-								<p>Soal <?php echo $i ?></p>
+								<p>Soal <?php echo $i ?>:</p>
+								<p><?php echo $p->soal ?></p>
 							</div>
 							<!-- Soal -->
-							
-							<?php echo form_open_multipart('compete/');?>
-								<div class="row">
-									<div class="col-2"></div>
-									<div class="btn-group file-field pt-2 col-4">
-				                        <label class="btn btn-primary">
-				                            <span class="fa fa-upload"></span>
-				                            <input type="file" name="userfile">
-				                        </label>
-				                        <label>
-				                            <input class="file-path blue-text" type="text" placeholder=" Upload File Jawaban" [value]="showFiles()">
-				                        </label>
-				                    </div>
-				                    <div class="btn-group file-field pt-2 col-4">
-				                        <label class="btn btn-primary">
-				                            <span class="fa fa-upload"></span>
-				                            <input type="file" name="userfile">
-				                        </label>
-				                        <label>
-				                            <input class="file-path blue-text" type="text" placeholder=" Upload File Algoritma" [value]="showFiles()">
-				                        </label>
-				                    </div>
-								</div>
-							</form>
+							<?php if ($this->compete_model->check_jawaban_si($this->compete_model->get_participants($_SESSION['username'])['IDparticipants'],$p->IDsoal)!=0): ?>
+								<p>Jawaban sudah terupload <i class="fa fa-thumbs-o-up"></i></p>
+							<?php else: ?>
+								<?php echo form_open_multipart('compete/');?>
+									<div class="row">
+										<div class="col-2"></div>
+										<div class="btn-group file-field pt-2 col-4">
+					                        <label class="btn btn-primary">
+					                            <span class="fa fa-upload"></span>
+					                            <input type="file" name="jawaban<?php echo $p->IDsoal ?>">
+					                        </label>
+					                        <label>
+					                            <input class="file-path blue-text" type="text" placeholder=" Upload File Jawaban" [value]="showFiles()">
+					                        </label>
+					                    </div>
+					                    <div class="btn-group file-field pt-2 col-4">
+					                        <label class="btn btn-primary">
+					                            <span class="fa fa-upload"></span>
+					                            <input type="file" name="algoritma<?php echo $p->IDsoal ?>">
+					                        </label>
+					                        <label>
+					                            <input class="file-path blue-text" type="text" placeholder=" Upload File Algoritma" [value]="showFiles()">
+					                        </label>
+					                    </div>
+									</div>
+								</form>
+							<?php endif; ?>
 	        			</div>
 					<?php else: ?>
 						<div class="tab-pane fade" id="soal<?php echo $i ?>" role="tabpanel">
 							<!-- Soal -->
 							<div class="my-3">
 								<p>Soal <?php echo $i ?></p>
+								<p><?php echo $p->soal ?></p>
 							</div>
 							<!-- Soal -->
 							
-							<?php echo form_open_multipart('compete/');?>
-								<div class="row">
-									<div class="col-2"></div>
-									<div class="btn-group file-field pt-2 col-4">
-				                        <label class="btn btn-primary">
-				                            <span class="fa fa-upload"></span>
-				                            <input type="file" name="userfile">
-				                        </label>
-				                        <label>
-				                            <input class="file-path blue-text" type="text" placeholder=" Upload File Jawaban" [value]="showFiles()">
-				                        </label>
-				                    </div>
-				                    <div class="btn-group file-field pt-2 col-4">
-				                        <label class="btn btn-primary">
-				                            <span class="fa fa-upload"></span>
-				                            <input type="file" name="userfile">
-				                        </label>
-				                        <label>
-				                            <input class="file-path blue-text" type="text" placeholder=" Upload File Algoritma" [value]="showFiles()">
-				                        </label>
-				                    </div>
-								</div>
-							</form>
+							<?php if ($this->compete_model->check_jawaban_si($this->compete_model->get_participants($_SESSION['username'])['IDparticipants'],$p->IDsoal)!=0): ?>
+								<p>Jawaban sudah terupload <i class="fa fa-thumbs-o-up"></i></p>
+							<?php else: ?>
+								<?php echo form_open_multipart('compete/');?>
+									<div class="row">
+										<div class="col-2"></div>
+										<div class="btn-group file-field pt-2 col-4">
+					                        <label class="btn btn-primary">
+					                            <span class="fa fa-upload"></span>
+					                            <input type="file" name="jawaban<?php echo $p->IDsoal ?>">
+					                        </label>
+					                        <label>
+					                            <input class="file-path blue-text" type="text" placeholder=" Upload File Jawaban" [value]="showFiles()">
+					                        </label>
+					                    </div>
+					                    <div class="btn-group file-field pt-2 col-4">
+					                        <label class="btn btn-primary">
+					                            <span class="fa fa-upload"></span>
+					                            <input type="file" name="algoritma<?php echo $p->IDsoal ?>">
+					                        </label>
+					                        <label>
+					                            <input class="file-path blue-text" type="text" placeholder=" Upload File Algoritma" [value]="showFiles()">
+					                        </label>
+					                    </div>
+									</div>
+								</form>
+							<?php endif; ?>
 	        			</div>
 					<?php endif ?>
 				<?php $i++; endforeach ?>

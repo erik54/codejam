@@ -31,7 +31,7 @@
 	<script type="text/javascript" src="<?php echo base_url('assets/js/popper.min.js')?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.min.js')?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('assets/js/mdb.js')?>"></script>
-
+    
 	<script>
         // SideNav Initialization
         $(".button-collapse").sideNav();
@@ -40,6 +40,7 @@
         new WOW().init();  
 
         // Data Picker Initialization
+        
         
 
         $(document).ready(function() {

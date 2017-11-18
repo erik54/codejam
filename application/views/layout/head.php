@@ -1,4 +1,14 @@
+<!DOCTYPE html>
 <html lang="en">
+<!-- HAYO MAU NGAPAIN NGINTIP-NGINTIP ?? ^^, -->
+<!-- BELAJAR YANG RAJIN YA !! -->
+<!-- #MayTheCodeBuiltinYou -->
+<!-- __  __  __  _          ___
+    |  \|__ |__ /_\ |  | |   |
+  © |__/|__ |  /   \|__| |__ |
+ -->
+<!-- <> with ❤ by Default -->
+<!-- ga usah bilang-bilang abis liat ini ^^, -->
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,6 +19,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
     <link href="<?php echo base_url('assets/css/bootstrap.min.css')?>" rel="stylesheet">
     <link href="<?php echo base_url('assets/css/mykaramel.min.css')?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/css/mykaramel.css')?>" rel="stylesheet">
 
     <?php
       if(isset($nav_active) && $nav_active == "beranda"){

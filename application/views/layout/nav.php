@@ -1,9 +1,6 @@
 <body>
     <nav class="navbar navbar-expand-lg flex-column flex-md-row fixed-top white scrolling-navbar">
-        <h1><a class="navbar-brand text-info" href="#">CodeJam</a></h1>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <h1><a class="navbar-brand text-info" href="<?php echo base_url() ?>">CodeJam</a></h1>
 
         <ul class="nav justify-content-end ml-auto">
             <?php if (isset($nav_active) && $nav_active == 'Home'): ?>
@@ -31,9 +28,9 @@
                         <?php if (isset($nav_active) && $nav_active == 'Masuk'): ?>
                             <a class="dropdown-item text-danger disabled" href="home/login">Masuk</a>
                         <?php else: ?>
-                            <a class="dropdown-item text-danger" href="home/login">Masuk</a>
+                            <a class="dropdown-item text-danger" href="<?php echo base_url() ?>home/login">Masuk</a>
                         <?php endif; ?>
-                        <a class="dropdown-item text-danger" href="home/register">Daftar</a>
+                        <a class="dropdown-item text-danger" href="<?php echo base_url() ?>home/register">Daftar</a>
                     </div>
                 </li>
             <?php endif; ?>

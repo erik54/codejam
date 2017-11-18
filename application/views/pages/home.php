@@ -1,5 +1,5 @@
 <!-- Intro Section -->
-<div class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url('<?php echo base_url("assets/image/home2.jpg") ?>'); min-height: 80%">
+<div class="view jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url('<?php echo base_url("assets/image/home2.jpg") ?>')">
     <div class="full-bg-img">
     	<div class="container flex-center">
             <div class="row pt-5 mt-3">

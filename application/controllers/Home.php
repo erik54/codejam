@@ -33,48 +33,50 @@ class Home extends CI_Controller{
 	public function masuk(){
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');
-		
+
 		$data = array(
-			'username' => $username, 
-			'password' => $password
+			'username' => $username,
+			'password' => $password,
+			'title'=> 'Codejam - Beranda',
+			'nav' => 'nav.php',
+			'isi' => 'pages/home',
+			'nav_active' => 'home'
 		);
 
-		$login = $this->home_model->get_users($data);
+		$whereS = array(
+		    'username' => $username
+        );
 
-			if( $login == "not_registered"){
-				$data['err_massages'] = "Username belum terdaftar....";
-				$_SESSION['login_err'] = true;
-				$_SESSION['user_err'] = $username;
-				$_SESSION['pass_err'] = $password;
-				$this->load->view('layout/wrapper', $data);
-			}else{
-				$db_pass = $this->home_model->get_users_pass($username)->password; 
-				$level= $this->home_model->get_users_level($username)->level; // [1]admin, [2]pengajar, [3]orangtua, [4]murid, [5]calon_orangtua, [0] guest
+        if($username == "" || $password == ""){
+            echo json_encode(array('status' => 'fail', 'msg' => 'Harap masukkan semua input...'));
+        }else{
+            $login = $this->home_model->get_users($data);
 
+            if( $login == "not_registered"){
+                echo json_encode(array('status' => 'fail', 'msg' => 'Username belum terdaftar....'));
+            }else{
+                $db_pass = $this->home_model->get_users_pass($username)->password;
+                $level= $this->home_model->get_users_level($username)->level; // [1]admin, [2]pengajar, [3]orangtua, [4]murid, [5]calon_orangtua, [0] guest
 
-				if(password_verify($password, $db_pass)){
-					$this->session->set_userdata('username', $username);
-					$this->session->set_userdata('password', $password);
-					$this->session->set_userdata('level', $level);
+                if(password_verify($password, $db_pass)){
+                    $this->session->set_userdata('username', $username);
+                    $this->session->set_userdata('password', $password);
+                    $this->session->set_userdata('level', $level);
 
-					if($level == 5){
-						$data['nav'] = 'calon_ortu/nav.php';
-					}elseif($level == 2){
-						$data['nav'] = 'nav.php';
-					}
-					
-					$this->load->view('layout/wrapper', $data);
-				}else{
-					$data['err_massages'] = "Password yang dimasukkan salah....";
-					$_SESSION['login_err'] = true;
-					$_SESSION['user_err'] = $username;
-					$_SESSION['pass_err'] = $password;
-					$this->load->view('layout/wrapper', $data);
-				}
-			}
+                    if($level == 5){
+                        $data['nav'] = 'calon_ortu/nav.php';
+                    }elseif($level == 2){
+                        $data['nav'] = 'nav.php';
+                    }
+                    echo json_encode(array('status' => 'ok'));
+                }else{
+                    echo json_encode(array('status' => 'fail', 'msg' => 'Password yang dimasukkan salah....'));
+                }
+            }
+        }
 	}
 
-	public function registrasi(){
+	public function register(){
 		$data = array(
 		'title'		=> 'CodeJam - Registrasi',
 		'nav' 		=> 'nav.php',
@@ -88,73 +90,49 @@ class Home extends CI_Controller{
 	
 	public function daftar(){
 		$username = $this->input->post('username');
-		$email    = $this->input->post('email');
-		$password = $this->input->post('password');
-		$passwordv= $this->input->post('passwordv');
-		$name	  = $this->input->post('name');
-		$telp	  = $this->input->post('telp');
-		$alamat	  = $this->input->post('alamat');
-		
-		$data = array(
-		'title'		=> 'My Karamel - Registrasi',
-		'nav' 		=> 'nav.php',
-		'isi' 		=> 'pages/registrasi',
-		'nav_active'=> 'registrasi',
-		'captcha' => $this->recaptcha->getWidget(), // menampilkan recaptcha
-        'script_captcha' => $this->recaptcha->getScriptTag() // javascript recaptcha ditaruh di head
-		);
+        $email    = $this->input->post('email');
+        $password = $this->input->post('password');
+        $passwordv= $this->input->post('passwordv');
+        $name	  = $this->input->post('name');
+        $college  = $this->input->post('college');
+        $tingkat  = $this->input->post('tingkat');
 
-		$recaptcha = $this->input->post('g-recaptcha-response');
+        $recaptcha = $this->input->post('g-recaptcha-response');
         $response = $this->recaptcha->verifyResponse($recaptcha);
 
-		
-		if(!isset($response['success']) || $response['success'] <> true){
-			$data['err_massages'] = "Recaptcha error";
-			$_SESSION['reg_err_username'] = $username;
-			$_SESSION['reg_err_email'] = $email;
-			$_SESSION['reg_err_name'] = $name;
-			$_SESSION['reg_err_telp'] = $telp;
-			$_SESSION['reg_err_alamat'] = $alamat;
-		}else{
-			if($password != $passwordv){
-			$data['err_massages'] = "password tidak sama...";
-			$_SESSION['reg_err_username'] = $username;
-			$_SESSION['reg_err_email'] = $email;
-			$_SESSION['reg_err_name'] = $name;
-			$_SESSION['reg_err_telp'] = $telp;
-			$_SESSION['reg_err_alamat'] = $alamat;
-		}else{
-			$username_check = $this->home_model->is_UserExist($username);
-			if($username_check == 0){ //check username yang diinput sudah terdaftar atau belum
-				//jika username input belum terdaftar
-				$data_users = array(
-					'username'	=> $username,
-					'email' 	=> $email,
-					'password'	=> password_hash($password, PASSWORD_DEFAULT),
-					'level'		=> 5
-				);	
-				$this->db->insert('users', $data_users);
-				$data_calonOrtu = array(
-					'username'	=> $username,
-					'noTelp'	=> $telp,
-					'nama'		=> $name,
-					'alamat'	=> $alamat
-				);
-				$this->db->insert('calonortu', $data_calonOrtu);
-				$data['succ_massages'] = "Akun berhasil didaftarkan :)";
-				$_SESSION['regist_err'] = false;
-			}else{ //jika username input sudah terdaftar
-				$data['err_massages'] = "Username sudah terdaftar sebelumnya...";
-				$_SESSION['regist_err'] = true;
-				$_SESSION['reg_err_email'] = $email;
-				$_SESSION['reg_err_name'] = $name;
-				$_SESSION['reg_err_telp'] = $telp;
-				$_SESSION['reg_err_alamat'] = $alamat;
-			}
-		}
-		}
-		
-		$this->load->view('layout/wrapper',$data);
+
+        if(!isset($response['success']) || $response['success'] <> true){
+            echo json_encode(array('status' => 'fail', 'msg' => 'Recaptcha dibutuhkan...'));
+        }else{
+            if($password != $passwordv){
+                echo json_encode(array('status' => 'fail', 'msg' => 'Password dan repassword tidak sama...'));
+            }elseif ($username == "" || $email == "" || $password == "" || $passwordv == "" || $name =="" || $college ==""
+                || $tingkat == ""){
+                echo json_encode(array('status' => 'fail', 'msg' => 'Harap isi semua input...'));
+            }else{
+                $username_check = $this->home_model->is_UserExist($username);
+                if($username_check == 0){ /*check username yang diinput sudah terdaftar atau belum*/
+                    /*jika username input belum terdaftar*/
+                    $data_users = array(
+                        'username'	=> $username,
+                        'email' 	=> $email,
+                        'password'	=> password_hash($password, PASSWORD_DEFAULT),
+                        'level'		=> 2
+                    );
+                    $this->db->insert('users', $data_users);
+                    $data_participants = array(
+                        'username'	=> $username,
+                        'nama'		=> $name,
+                        'college'	=> $college,
+                        'tingkat'	=> $tingkat
+                    );
+                    $this->db->insert('participants', $data_participants);
+                    echo json_encode(array('status' => 'ok', 'msg' => 'Akun berhasil didaftarkan :)'));
+                }else{ //jika username input sudah terdaftar
+                    echo json_encode(array('status' => 'fail', 'msg' => 'Akun sudah didaftarkan sebelumnya...'));
+                }
+            }
+        }
 	}
 
 	function logout()
