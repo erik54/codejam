@@ -64,7 +64,7 @@
 						        </li>
 							<?php else: ?>
 								<li class="nav-item">
-						            <a class="nav-link waves-light" data-toggle="tab" href="#soal<?php echo $i ?>" role="tab"><i class="fa fa-user fa-2x" aria-hidden="true"></i><br>Soal <?php echo $i ?></a>
+						            <a class="nav-link waves-light" data-toggle="tab" href="#soal<?php echo $i ?>" role="tab"><i class="fa fa-clipboard fa-2x" aria-hidden="true"></i><br>Soal <?php echo $i ?></a>
 						        </li>
 					        <?php endif; ?>
 						<?php endif ?>
@@ -85,29 +85,32 @@
 							</div>
 							<!-- Soal -->
 							<?php if ($this->compete_model->check_jawaban_si($this->compete_model->get_participants($_SESSION['username'])['IDparticipants'],$p->IDsoal)!=0): ?>
-								<p>Jawaban sudah terupload <i class="fa fa-thumbs-o-up"></i></p>
+								<p>Jawaban sudah terupload <i class="fa fa-thumbs-o-up text-info"></i></p>
 							<?php else: ?>
-								<?php echo form_open_multipart('compete/');?>
+								<?php echo form_open_multipart('compete/upload_solusi/'.$p->IDsoal);?>
 									<div class="row">
 										<div class="col-2"></div>
 										<div class="btn-group file-field pt-2 col-4">
-					                        <label class="btn btn-primary">
+					                        <label class="btn btn-sm btn-primary">
 					                            <span class="fa fa-upload"></span>
-					                            <input type="file" name="jawaban<?php echo $p->IDsoal ?>">
+					                            <input type="file" name="jawaban1">
 					                        </label>
 					                        <label>
 					                            <input class="file-path blue-text" type="text" placeholder=" Upload File Jawaban" [value]="showFiles()">
 					                        </label>
 					                    </div>
 					                    <div class="btn-group file-field pt-2 col-4">
-					                        <label class="btn btn-primary">
+					                        <label class="btn btn-sm btn-primary">
 					                            <span class="fa fa-upload"></span>
-					                            <input type="file" name="algoritma<?php echo $p->IDsoal ?>">
+					                            <input type="file" name="jawaban2">
 					                        </label>
 					                        <label>
 					                            <input class="file-path blue-text" type="text" placeholder=" Upload File Algoritma" [value]="showFiles()">
 					                        </label>
 					                    </div>
+									</div>
+									<div class="row">
+										<button class="btn btn-primary" type="submit">Submit</button>
 									</div>
 								</form>
 							<?php endif; ?>
@@ -122,15 +125,15 @@
 							<!-- Soal -->
 							
 							<?php if ($this->compete_model->check_jawaban_si($this->compete_model->get_participants($_SESSION['username'])['IDparticipants'],$p->IDsoal)!=0): ?>
-								<p>Jawaban sudah terupload <i class="fa fa-thumbs-o-up"></i></p>
+								<p>Jawaban sudah terupload <i class="fa fa-thumbs-o-up text-info"></i></p>
 							<?php else: ?>
-								<?php echo form_open_multipart('compete/');?>
+								<?php echo form_open_multipart('compete/upload_solusi/'.$p->IDsoal);?>
 									<div class="row">
 										<div class="col-2"></div>
 										<div class="btn-group file-field pt-2 col-4">
 					                        <label class="btn btn-primary">
 					                            <span class="fa fa-upload"></span>
-					                            <input type="file" name="jawaban<?php echo $p->IDsoal ?>">
+					                            <input type="file" name="jawaban1">
 					                        </label>
 					                        <label>
 					                            <input class="file-path blue-text" type="text" placeholder=" Upload File Jawaban" [value]="showFiles()">
@@ -139,12 +142,15 @@
 					                    <div class="btn-group file-field pt-2 col-4">
 					                        <label class="btn btn-primary">
 					                            <span class="fa fa-upload"></span>
-					                            <input type="file" name="algoritma<?php echo $p->IDsoal ?>">
+					                            <input type="file" name="jawaban2">
 					                        </label>
 					                        <label>
 					                            <input class="file-path blue-text" type="text" placeholder=" Upload File Algoritma" [value]="showFiles()">
 					                        </label>
 					                    </div>
+									</div>
+									<div class="row">
+										<button class="btn btn-primary" type="submit">Submit</button>
 									</div>
 								</form>
 							<?php endif; ?>

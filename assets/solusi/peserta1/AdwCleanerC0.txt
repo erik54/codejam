@@ -1,0 +1,146 @@
+# AdwCleaner v6.047 - Logfile created 06/06/2017 at 15:51:43
+# Updated on 19/05/2017 by Malwarebytes
+# Database : 2017-06-05.1 [Server]
+# Operating System : Windows 8.1 Pro  (X64)
+# Username : Erik SA - BRAINWARE
+# Running from : C:\Users\Erik SA\Downloads\adwcleaner_6.047.exe
+# Mode: Clean
+# Support : https://www.malwarebytes.com/support
+
+
+
+***** [ Services ] *****
+
+[-] Service deleted: WCAssistantService
+[-] Service deleted: WindowsSecurity
+[-] Service deleted: AdBlockerService
+[-] Service deleted: WMPNetworkAcSvc
+[-] Service deleted: XBox
+[-] Service deleted: serverss
+
+
+***** [ Folders ] *****
+
+[-] Folder deleted: C:\Users\Erik SA\ReportSender
+[-] Folder deleted: C:\Users\Erik SA\AppData\Local\GeoLocator
+[-] Folder deleted: C:\Users\Erik SA\AppData\Roaming\Note-up
+[-] Folder deleted: C:\Users\Erik SA\AppData\Roaming\lavasoft\web companion
+[-] Folder deleted: C:\Users\Erik SA\AppData\Roaming\gplyra
+[-] Folder deleted: C:\Users\Erik SA\AppData\Roaming\WMPNetworkAcSvc
+[#] Folder deleted on reboot: C:\Users\Erik SA\AppData\Roaming\Note-UP
+[-] Folder deleted: C:\ProgramData\lavasoft\web companion
+[#] Folder deleted on reboot: C:\ProgramData\Application Data\lavasoft\web companion
+[-] Folder deleted: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Lavasoft\WebCompanion
+[-] Folder deleted: C:\Users\Public\Documents\Guid
+[-] Folder deleted: C:\Program Files (x86)\adblocker
+[-] Folder deleted: C:\Program Files (x86)\lavasoft\web companion
+[-] Folder deleted: C:\Program Files (x86)\WeatherChickn
+[-] Folder deleted: C:\Program Files (x86)\Dalesthijotion
+[-] Folder deleted: C:\ProgramData\Windows Security
+[-] Folder deleted: C:\Users\Erik SA\AppData\Roaming\Mozilla\Firefox\naweriweentcofise
+[-] Folder deleted: C:\ProgramData\Microsoft\Network\Dsq
+[-] Folder deleted: C:\ProgramData\Microsoft\XBLive
+
+
+***** [ Files ] *****
+
+[-] File deleted: C:\Users\Erik SA\AppData\Roaming\Installer.dat
+[-] File deleted: C:\Users\Erik SA\AppData\Roaming\InstallationConfiguration.xml
+[-] File deleted: C:\Users\Erik SA\AppData\Roaming\Mozilla\Firefox\Profiles\ipsdlq9d.default\invalidprefs.js
+[-] File deleted: C:\Users\Erik SA\AppData\Roaming\Mozilla\Firefox\Profiles\ipsdlq9d.default\searchplugins\yahoo-lavasoft.xml
+[-] File deleted: C:\Users\Erik SA\AppData\Local\Google\Chrome\User Data\ChromeDefaultData\Local Storage\hxxps_foxi69.tlscdn.com_0.localstorage
+[-] File deleted: C:\Users\Erik SA\AppData\Local\Google\Chrome\User Data\ChromeDefaultData\Local Storage\hxxps_foxi69.tlscdn.com_0.localstorage-journal
+[-] File deleted: C:\Users\Erik SA\AppData\Local\Google\Chrome\User Data\ChromeDefaultData\Local Storage\hxxps_static.cmptch.com_0.localstorage
+[-] File deleted: C:\Users\Erik SA\AppData\Local\Google\Chrome\User Data\ChromeDefaultData\Local Storage\hxxps_static.cmptch.com_0.localstorage-journal
+[-] File deleted: C:\Users\Erik SA\AppData\Local\Google\Chrome\User Data\ChromeDefaultData\Local Storage\hxxp_search.newtabtvsearch.com_0.localstorage
+[-] File deleted: C:\Users\Erik SA\AppData\Local\Google\Chrome\User Data\ChromeDefaultData\Local Storage\hxxp_search.newtabtvsearch.com_0.localstorage-journal
+[-] File deleted: C:\Users\Erik SA\AppData\Local\Google\Chrome\User Data\ChromeDefaultData\Local Storage\hxxp_st.chatango.com_0.localstorage
+[-] File deleted: C:\Users\Erik SA\AppData\Local\Google\Chrome\User Data\ChromeDefaultData\Local Storage\hxxp_st.chatango.com_0.localstorage-journal
+[-] File deleted: C:\Users\Erik SA\AppData\Local\Google\Chrome\User Data\ChromeDefaultData\Local Storage\hxxp_videodownloadconverter.dl.tb.ask.com_0.localstorage
+[-] File deleted: C:\Users\Erik SA\AppData\Local\Google\Chrome\User Data\ChromeDefaultData\Local Storage\hxxp_videodownloadconverter.dl.tb.ask.com_0.localstorage-journal
+
+
+***** [ DLL ] *****
+
+
+
+***** [ WMI ] *****
+
+
+
+***** [ Shortcuts ] *****
+
+
+
+***** [ Scheduled Tasks ] *****
+
+[-] Task deleted: PPI Update
+[-] Task deleted: Microsoft\Windows\Multimedia\ReportSender
+[-] Task deleted: Muvotionatfesy Log 
+
+
+***** [ Registry ] *****
+
+[-] Key deleted: HKLM\SYSTEM\CurrentControlSet\services\wmpnetworkacsvc
+[-] Key deleted: HKLM\SYSTEM\CurrentControlSet\services\xbox
+[-] Key deleted: HKLM\SYSTEM\CurrentControlSet\services\windowssecurity
+[-] Key deleted: HKLM\SOFTWARE\Classes\AppID\3045035B-3C14-4698-8AC4-ADB18CC42C1E
+[-] Key deleted: HKU\S-1-5-21-1737633488-3452990348-866741427-1001\Software\Installer
+[-] Key deleted: HKU\S-1-5-21-1737633488-3452990348-866741427-1001\Software\Lavasoft\Web Companion
+[-] Key deleted: HKU\S-1-5-21-1737633488-3452990348-866741427-1001\Software\INSTALLPATH\STATUS
+[#] Key deleted on reboot: HKCU\Software\Installer
+[#] Key deleted on reboot: HKCU\Software\Lavasoft\Web Companion
+[#] Key deleted on reboot: HKCU\Software\INSTALLPATH\STATUS
+[-] Key deleted: HKLM\SOFTWARE\Lavasoft\Web Companion
+[-] Key deleted: HKLM\SOFTWARE\StarkIndustry
+[-] Key deleted: HKLM\SOFTWARE\trotuxSoftware
+[-] Key deleted: HKLM\SOFTWARE\Socia2Searc
+[-] Key deleted: HKLM\SOFTWARE\WMPNetworkAcSvc
+[#] Key deleted on reboot: [x64] HKCU\Software\Installer
+[#] Key deleted on reboot: [x64] HKCU\Software\Lavasoft\Web Companion
+[#] Key deleted on reboot: [x64] HKCU\Software\INSTALLPATH\STATUS
+[-] Key deleted: [x64] HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\gplyra
+[-] Data restored: HKU\S-1-5-21-1737633488-3452990348-866741427-1001\Software\Microsoft\Internet Explorer\Main [Start Page] 
+[-] Data restored: HKCU\Software\Microsoft\Internet Explorer\Main [Start Page] 
+[-] Data restored: [x64] HKCU\Software\Microsoft\Internet Explorer\Main [Start Page] 
+[-] Key deleted: HKU\S-1-5-21-1737633488-3452990348-866741427-1001\Software\Microsoft\Internet Explorer\SearchScopes\{C0C3A6C6-03BC-4195-8FCB-AEA091301353}
+[#] Key deleted on reboot: HKCU\Software\Microsoft\Internet Explorer\SearchScopes\{C0C3A6C6-03BC-4195-8FCB-AEA091301353}
+[#] Key deleted on reboot: [x64] HKCU\Software\Microsoft\Internet Explorer\SearchScopes\{C0C3A6C6-03BC-4195-8FCB-AEA091301353}
+[-] Value deleted: HKU\S-1-5-21-1737633488-3452990348-866741427-1001\Software\Microsoft\Windows\CurrentVersion\Run [Web Companion]
+[#] Value deleted on reboot: HKCU\Software\Microsoft\Windows\CurrentVersion\Run [Web Companion]
+[#] Value deleted on reboot: [x64] HKCU\Software\Microsoft\Windows\CurrentVersion\Run [Web Companion]
+[-] Value deleted: [x64] HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run [gplyra]
+[-] Value deleted: [x64] HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\StartupApproved\Run [gplyra]
+[-] Value deleted: [x64] HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\StartupApproved\Run32 [MyMemory]
+[-] Value deleted: HKU\S-1-5-21-1737633488-3452990348-866741427-1001\Software\Microsoft\Windows\CurrentVersion\Run [svchost0]
+[-] Value deleted: HKU\S-1-5-21-1737633488-3452990348-866741427-1001\Software\Microsoft\Windows\CurrentVersion\Explorer\StartupApproved\Run [svchost0]
+[#] Value deleted on reboot: HKCU\Software\Microsoft\Windows\CurrentVersion\Run [svchost0]
+[#] Value deleted on reboot: [x64] HKCU\Software\Microsoft\Windows\CurrentVersion\Run [svchost0]
+[-] Key deleted: HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\Domains\webcompanion.com
+[#] Key deleted on reboot: HKLM\SOFTWARE\Classes\AppID\3045035B-3C14-4698-8AC4-ADB18CC42C1E
+[-] Key deleted: HKCU\Software\Google\Chrome\Extensions\fcfenmboojpjinhpgggodefccipikbpd
+[#] Key deleted on reboot: [x64] HKCU\Software\Google\Chrome\Extensions\fcfenmboojpjinhpgggodefccipikbpd
+
+
+***** [ Web browsers ] *****
+
+[-] Firefox preferences cleaned: "browser.newtab.url" -  "hxxps://id.search.yahoo.com/yhs/web?hspart=lvs&hsimp=yhs-awc&type=lvs__webcompa__1_0__ya__hp_WCYID10341__170602__yaff"
+[-] Firefox preferences cleaned: "browser.newtabpage.url" -  "hxxps://id.search.yahoo.com/yhs/web?hspart=lvs&hsimp=yhs-awc&type=lvs__webcompa__1_0__ya__hp_WCYID10341__170602__yaff"
+[-] Firefox preferences cleaned: "browser.search.searchengine.hp" -  "hxxp://www.trotux.com/?z=0be0798bb3e77dbda63fbf0g5z4m9z8tfwae1z3m5t&from=fss&uid=ST500LT012-1DG142_S3PMMN2VXXXXS3PMMN2V&type=hp"
+[-] Firefox preferences cleaned: "browser.search.searchengine.sp" -  "hxxp://www.trotux.com/search/?from=fss&q={searchTerms}&type=sp&uid=ST500LT012-1DG142_S3PMMN2VXXXXS3PMMN2V&z=0be0798bb3e77dbda63fbf0g5z4m9z8tfwae1z3m5t"
+[-] Firefox preferences cleaned: "browser.search.searchengine.url" -  "hxxp://www.trotux.com/search/?from=fss&q={searchTerms}&type=sp&uid=ST500LT012-1DG142_S3PMMN2VXXXXS3PMMN2V&z=0be0798bb3e77dbda63fbf0g5z4m9z8tfwae1z3m5t"
+[-] Firefox preferences cleaned: "browser.startup.homepage" -  "hxxps://id.search.yahoo.com/yhs/web?hspart=lvs&hsimp=yhs-awc&type=lvs__webcompa__1_0__ya__hp_WCYID10341__170602__yaff"
+[-] [C:\Users\Erik SA\AppData\Local\Google\Chrome\User Data\ChromeDefaultData] [extension] Deleted: fcfenmboojpjinhpgggodefccipikbpd
+
+
+*************************
+
+:: "Tracing" keys deleted
+:: Winsock settings cleared
+
+*************************
+
+C:\AdwCleaner\AdwCleaner[C0].txt - [9031 Bytes] - [06/06/2017 15:51:43]
+C:\AdwCleaner\AdwCleaner[S0].txt - [9281 Bytes] - [06/06/2017 15:37:33]
+
+########## EOF - C:\AdwCleaner\AdwCleaner[C0].txt - [9177 Bytes] ##########

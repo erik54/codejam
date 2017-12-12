@@ -236,6 +236,19 @@
                 unset(
                     $_SESSION['deletex']
                 );
+        }elseif (isset($_SESSION['info'])) {
+            echo "
+                <script>
+                    
+                    $(document).ready(function() {
+                        toastr['info']('".$_SESSION['info']."');
+                    });
+                    
+                </script>
+                ";
+                unset(
+                    $_SESSION['info']
+                );
         }
     ?>
 
